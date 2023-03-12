@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -90,7 +91,6 @@ main{
 
 .tab_header:hover{
     cursor: pointer;
-    
 }
 
 .ico{
@@ -130,24 +130,6 @@ main{
     opacity: 1;
 }
 
-.tab_content{
-    display: flex;
-    justify-content: center;
-    height: 0px;
-    overflow: hidden;
-    transition: all .5s;
-    transform: scale(0);
-}
-
-.tab_header:hover + .tab_content{
-    height: 200px;
-    transform: scale(1);
-}
-
-.tab_content img{
-    height: 200px;
-}
-
 .tab_header:hover .tab_ico1{
     rotate: 45deg;
     opacity: 1;
@@ -169,6 +151,29 @@ main{
     opacity: 1;
 }
 
+.tab_content{
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    transform: scale(0);
+}
+
+.tab_header:hover + .tab_content{
+    height: 200px;
+    transform: scale(1);
+}
+
+.tab_content img{
+    height: 200px;
+}
+
+.tab_content:hover{
+    cursor: pointer;
+}
+
+
 @media (hover: hover) {
     /* when hover is supported */
     .tab_header:hover {
@@ -177,11 +182,12 @@ main{
   }
 
 @media (max-width: 991px){
+    *{font-size: 24px;}
     .accordion_box{width: 60vw;}
-
 }
 
 @media (max-width: 575px){
+    *{font-size: 28px;}
     .accordion_box{width: 100vw;}
 
 }
