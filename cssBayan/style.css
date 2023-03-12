@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.accordion_box{
+    width: 40vw;
+    background-color: #fff;
+    padding: 20px 40px;
+}
+
+.accordion_header{
+    border-bottom: 2px solid grey;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* add checkbox properties */
+#tab_check1, #tab_check2, #tab_check3, #tab_check4, #tab_check5 {
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+#tab_check1:checked ~ .tab_content {
+    height: 200px;
+    transform: scale(1);
+}
+
+#tab_check1:checked + label > .tab_ico1 {
+    opacity: 1;
+    rotate: 45deg;
+}
+
+#tab_check2:checked ~ .tab_content {
+    height: 200px;
+    transform: scale(1);
+}
+
+#tab_check2:checked + label > .tab_ico2 {
+    opacity: 1;
+    rotate: 45deg;
+}
+
+#tab_check3:checked ~ .tab_content {
+    height: 200px;
+    transform: scale(1);
+}
+
+#tab_check3:checked + label > .tab_ico3 {
+    opacity: 1;
+    rotate: 45deg;
+}
+
+#tab_check4:checked ~ .tab_content {
+    height: 200px;
+    transform: scale(1);
+}
+
+#tab_check4:checked + label > .tab_ico4 {
+    opacity: 1;
+    rotate: 45deg;
+}
+
+#tab_check5:checked ~ .tab_content {
+    height: 200px;
+    transform: scale(1);
+}
+
+#tab_check5:checked + label > .tab_ico5 {
+    opacity: 1;
+    rotate: 45deg;
+}
+
+.tab_header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    transition: all .2s linear;
+}
+
+.tab_header:hover{
+    cursor: pointer;
+}
+
+.ico{
+    font-weight: bold;
+    transition: all .2s linear;
+}
+
+.tab_ico1{
+    opacity: 0;  
+}
+.tab_ico2{
+    opacity: 0;  
+}
+.tab_ico3{
+    opacity: 0;  
+}
+.tab_ico4{
+    opacity: 0;  
+}
+.tab_ico5{
+    opacity: 0;  
+}
+
+.accordion_box:hover .tab_ico1{
+    opacity: 1;
+}
+.accordion_box:hover .tab_ico2{
+    opacity: 1;
+}
+.accordion_box:hover .tab_ico3{
+    opacity: 1;
+}
+.accordion_box:hover .tab_ico4{
+    opacity: 1;
+}
+.accordion_box:hover .tab_ico5{
+    opacity: 1;
+}
+
+.tab_header:hover .tab_ico1{
+    rotate: 45deg;
+    opacity: 1;
+}
+.tab_header:hover .tab_ico2{
+    rotate: 45deg;
+    opacity: 1;
+}
+.tab_header:hover .tab_ico3{
+    rotate: 45deg;
+    opacity: 1;
+}
+.tab_header:hover .tab_ico4{
+    rotate: 45deg;
+    opacity: 1;
+}
+.tab_header:hover .tab_ico5{
+    rotate: 45deg;
+    opacity: 1;
+}
+
+.tab_content{
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    transform: scale(0);
+}
+
+.tab_header:hover + .tab_content{
+    height: 200px;
+    transform: scale(1);
+}
+
+.tab_content img{
+    height: 200px;
+}
+
+.tab_content:hover{
+    cursor: pointer;
+}
+
+
+@media (hover: hover) {
+    /* when hover is supported */
+    .tab_header:hover {
+      color: rgb(255, 226, 63);
+    }
+  }
+
+@media (max-width: 991px){
+    *{font-size: 24px;}
+    .accordion_box{width: 60vw;}
+}
+
+@media (max-width: 575px){
+    *{font-size: 28px;}
+    .accordion_box{width: 100vw;}
+
+}
