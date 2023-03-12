@@ -130,7 +130,6 @@ main{
     opacity: 1;
 }
 
-
 .tab_content{
     display: flex;
     justify-content: center;
@@ -141,32 +140,13 @@ main{
 }
 
 .tab_header:hover + .tab_content{
-    /* display: block;
-    animation: fade_in_show 0.5s */
-    /* opacity: 1;
-    height: auto; */
     height: 200px;
     transform: scale(1);
-    /* animation: fade_in_show .5s */
-    
 }
 
 .tab_content img{
     height: 200px;
 }
-
-/* @keyframes fade_in_show {
-    0% {
-         opacity: 0;
-         transform: scale(0)
-    }
-
-    100% {
-         opacity: 1;
-         transform: scale(1)
-    }
-} */
-
 
 .tab_header:hover .tab_ico1{
     rotate: 45deg;
@@ -189,15 +169,12 @@ main{
     opacity: 1;
 }
 
-
 @media (hover: hover) {
     /* when hover is supported */
-    a:hover {
-      color: white;
-      background: black;
+    .tab_header:hover {
+      color: rgb(255, 226, 63);
     }
   }
-
 
 @media (max-width: 991px){
     .accordion_box{width: 60vw;}
