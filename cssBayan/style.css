@@ -15,7 +15,6 @@ main{
 
 .accordion_box{
     width: 40vw;
-    height: 600px;
     background-color: #fff;
     padding: 20px 40px;
 }
@@ -26,13 +25,15 @@ main{
     margin-bottom: 20px;
 }
 
+/* add checkbox properties */
 #tab_check1, #tab_check2, #tab_check3, #tab_check4, #tab_check5 {
     opacity: 0;
     transition: all .2s linear;
 }
 
 #tab_check1:checked ~ .tab_content {
-    display: flex;
+    height: 200px;
+    transform: scale(1);
 }
 
 #tab_check1:checked + label > .tab_ico1 {
@@ -41,7 +42,8 @@ main{
 }
 
 #tab_check2:checked ~ .tab_content {
-    display: flex;
+    height: 200px;
+    transform: scale(1);
 }
 
 #tab_check2:checked + label > .tab_ico2 {
@@ -50,7 +52,8 @@ main{
 }
 
 #tab_check3:checked ~ .tab_content {
-    display: flex;
+    height: 200px;
+    transform: scale(1);
 }
 
 #tab_check3:checked + label > .tab_ico3 {
@@ -59,7 +62,8 @@ main{
 }
 
 #tab_check4:checked ~ .tab_content {
-    display: flex;
+    height: 200px;
+    transform: scale(1);
 }
 
 #tab_check4:checked + label > .tab_ico4 {
@@ -68,7 +72,8 @@ main{
 }
 
 #tab_check5:checked ~ .tab_content {
-    display: flex;
+    height: 200px;
+    transform: scale(1);
 }
 
 #tab_check5:checked + label > .tab_ico5 {
@@ -127,18 +132,41 @@ main{
 
 
 .tab_content{
-    display: none;
-    transition: all .2s linear;
-}
-
-.tab-content p {
-    transition: all .2s linear;
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    transform: scale(0);
 }
 
 .tab_header:hover + .tab_content{
-    display: flex;
-    transition: all .2s linear;
+    /* display: block;
+    animation: fade_in_show 0.5s */
+    /* opacity: 1;
+    height: auto; */
+    height: 200px;
+    transform: scale(1);
+    /* animation: fade_in_show .5s */
+    
 }
+
+.tab_content img{
+    height: 200px;
+}
+
+/* @keyframes fade_in_show {
+    0% {
+         opacity: 0;
+         transform: scale(0)
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
+} */
+
 
 .tab_header:hover .tab_ico1{
     rotate: 45deg;
@@ -170,3 +198,13 @@ main{
     }
   }
 
+
+@media (max-width: 991px){
+    .accordion_box{width: 60vw;}
+
+}
+
+@media (max-width: 575px){
+    .accordion_box{width: 100vw;}
+
+}
